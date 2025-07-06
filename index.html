@@ -3,29 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projility Infocom - Sejal</title>
-
+    <title>Projility Infocom</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <!-- Navbar -->
     <header class="navbar">
-      <img
-        src="./assests/images/logo_navbar.png"
-        alt="Projility Logo"
-        class="logo"
-      />
-      <nav>
+      <div class="navbar-left">
+        <img
+          src="./assests/images/logo_navbar.png"
+          alt="Projility Logo"
+          class="logo"
+        />
+      </div>
+
+      <nav class="navbar-center">
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -34,37 +29,39 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="theme-toggle navbar-right">
+        <input type="checkbox" id="toggle-theme" />
+        <label for="toggle-theme" class="toggle-label">
+          <span class="sun">☀️</span>
+          <span class="moon">🌙</span>
+        </label>
+      </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero">
-      <div class="hero-text" data-aos="fade-up">
-        <h1>Innovative Solutions in</h1>
-        <h2><span id="typed-text"></span></h2>
-        <p class="tagline">Smarter Infrastructure for a Connected Future</p>
-        <p class="intro">
-          Projility Infocom is an emerging tech-driven startup delivering
-          intelligent solutions in Audio-Visual, Telecom, and Security systems.
-          Born from the idea that infrastructure should be simple, smart, and
-          scalable, we empower organizations and smart homes across India with
-          integrated technologies that enhance communication, collaboration, and
-          safety.
-        </p>
-        <p class="intro">
+  <div class="hero-left" data-aos="fade-up">
+    <h2 class="hero-title">TOGETHER WE</h2>
+    <h3 class="hero-highlight">REINVENT</h3>
+    <p class="hero-tagline">
+      Empowering homes and organizations across India with Audio-Visual, Telecom, and Security solutions.
+    </p>
+    <p class="hero-tagline">
           We blend startup agility with enterprise-grade reliability to build
           infrastructure that grows with you.
         </p>
-        <a href="#contact" class="cta-button">Request a Demo</a>
-      </div>
-      <div class="hero-img" data-aos="fade-left">
-        <img src="assets/images/hero.svg" alt="Smart Tech Illustration" />
-      </div>
-    </section>
+    <a href="#contact" class="cta-button">Request a Demo</a>
+  </div>
+
+  <div class="hero-right" data-aos="fade-left">
+    <img src="./assests/images/hero.gif" alt="Tech Illustration" />
+  </div>
+</section>
+
 
     <!-- About Section -->
     <section class="about" id="about">
       <div class="about-content" data-aos="fade-right">
-        <h2>About Us</h2>
+        <h1>About Us</h1>
         <p><strong>Building Infrastructure That Thinks Ahead</strong></p>
         <p>
           Founded by industry experts with a shared vision to disrupt
@@ -78,7 +75,7 @@
         </p>
       </div>
       <div class="about-image" data-aos="fade-left">
-        <img src="assets/images/about.svg" alt="About Projility Infocom" />
+        <img src="./assests/images/about.gif" alt="About Projility Infocom" />
       </div>
     </section>
 
@@ -91,7 +88,7 @@
 
       <div class="service-cards">
         <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/icons/audio.svg" alt="Audio Visual Icon" />
+          <img src="./assests/images/audio-visual.jpg" alt="Audio Visual Icon" />
           <h3>Audio-Visual Solutions</h3>
           <ul>
             <li>Smart panels & interactive displays</li>
@@ -101,7 +98,7 @@
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/icons/telecom.svg" alt="Telecom Icon" />
+          <img src="./assets/images/telecom.jpg" alt="Telecom Icon" />
           <h3>Telecom Solutions</h3>
           <ul>
             <li>Startup-ready VoIP systems</li>
@@ -111,7 +108,7 @@
         </div>
 
         <div class="card" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/icons/security.svg" alt="Security Icon" />
+          <img src="./assests/images/security.jpg" alt="Security Icon" />
           <h3>Security Systems</h3>
           <ul>
             <li>Modern surveillance & access control</li>
@@ -131,27 +128,27 @@
 
       <div class="industry-grid">
         <div class="industry-card" data-aos="zoom-in">
-          <img src="assets/icons/bfsi.svg" alt="BFSI" />
+          <img src="./assests/images/bfsi.jpg" alt="BFSI" />
           <p>BFSI</p>
         </div>
         <div class="industry-card" data-aos="zoom-in">
-          <img src="assets/icons/retail.svg" alt="Retail" />
+          <img src="./assests/images/retail.jpg" alt="Retail" />
           <p>Hospitality & Retail</p>
         </div>
         <div class="industry-card" data-aos="zoom-in">
-          <img src="assets/icons/healthcare.svg" alt="Healthcare" />
+          <img src="./assests/images/health care.jpg" alt="Healthcare" />
           <p>Pharmaceuticals & Healthcare</p>
         </div>
         <div class="industry-card" data-aos="zoom-in">
-          <img src="assets/icons/media.svg" alt="Media" />
+          <img src="./assests/images/media.jpg" alt="Media" />
           <p>Media & Entertainment</p>
         </div>
         <div class="industry-card" data-aos="zoom-in">
-          <img src="assets/icons/gov.svg" alt="Gov" />
+          <img src="./assests/images/gov.jpg" alt="Gov" />
           <p>Government & Public Sector</p>
         </div>
         <div class="industry-card" data-aos="zoom-in">
-          <img src="assets/icons/education.svg" alt="Education" />
+          <img src="./assests/images/education.jpg" alt="Education" />
           <p>Education & Institutions</p>
         </div>
       </div>
@@ -216,7 +213,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
