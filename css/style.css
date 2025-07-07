@@ -260,7 +260,7 @@ a {
     justify-content: space-between;
     gap: 4rem;
     padding: 6rem 5%;
-    background-color: #121212;;
+    background-color: #121212;
     flex-wrap: wrap;
 }
 
@@ -327,12 +327,20 @@ a {
 =================== */
 .services {
     padding: 4rem 5%;
-    background: var(--bg-color);
+    background: #121212;
     text-align: center;
 }
 
+.services h1 {
+    color: #00c2ff;
+    margin-top: 40px;
+    font-size: 3rem;
+}
+
 .services-subtitle {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    color: #fff;
+    font-size: 2rem;
 }
 
 .service-cards {
@@ -357,15 +365,14 @@ a {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 400px;
     display: block;
 }
 
-.card h3,
 .card ul {
     position: absolute;
     left: -100%;
-    background-color: rgba(23, 84, 135, 0.9);
+    background-color: rgba(9, 35, 57, 0.9);
     color: #fff;
     padding: 1.5rem;
     height: 100%;
@@ -388,11 +395,23 @@ a {
 .industries {
     padding: 4rem 5%;
     text-align: center;
+    background: #121212;
+}
+
+.industries h1 {
+    color: #00c2ff;
+    margin-top: 30px;
+    font-size: 3rem;
+}
+.industries-subtitle {
+    margin-bottom: 4rem;
+    color: #fff;
+    font-size: 2rem;
 }
 
 .industry-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -403,13 +422,20 @@ a {
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
+.industry-card p {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
 
 .industry-card:hover {
     transform: scale(1.05);
 }
 
 .industry-card img {
-    height: 80px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 0.5rem;
 }
 
@@ -418,7 +444,19 @@ a {
 =================== */
 .contact {
     padding: 4rem 5%;
-    background: var(--card-bg);
+    background: #121212;
+}
+
+.contact h1 {
+    color: #00c2ff;
+    margin-top: 30px;
+    font-size: 3rem;
+}
+
+.contact-subtitle {
+    margin-bottom: 4rem;
+    color: #fff;
+    font-size: 2rem;
 }
 
 .contact-container {
@@ -462,10 +500,16 @@ a {
     flex: 1;
     line-height: 1.6;
 }
+.contact-info h3 {
+    color: #00c2ff;
+}
+.contact-info p{
+    color: #a3d6e6
+}
 
 .contact-info a {
-    color: var(--accent-color);
-    text-decoration: underline;
+    color: #ccc;
+    text-decoration: none;
 }
 
 /* ===================
