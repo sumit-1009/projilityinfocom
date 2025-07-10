@@ -1,22 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById("toggle-theme");
-  const body = document.body;
+document.addEventListener("DOMContentLoaded", function () {
+  const toggler = document.querySelector(".custom-toggler");
+  const navMenu = document.querySelector(".offcanvas-style");
+  const navLinks = document.querySelectorAll(".nav-link");
+  const logo = document.querySelector(".logo");
 
-  // Load stored theme on page load
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    body.classList.add("dark");
-    themeToggle.checked = true;
+  if (toggler && navMenu) {
+    toggler.addEventListener("click", () => {
+      toggler.classList.toggle("active");
+      navMenu.classList.toggle("show");
+      logo.classList.toggle("logo-animate");
+    });
   }
 
-  // Toggle theme and store preference
-  themeToggle.addEventListener("change", () => {
-    body.classList.toggle("dark");
-    const theme = body.classList.contains("dark") ? "dark" : "light";
-    localStorage.setItem("theme", theme);
-
-    // Add fade animation
-    body.classList.add("theme-transition");
-    setTimeout(() => body.classList.remove("theme-transition"), 500);
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (toggler && navMenu.classList.contains("show")) {
+        toggler.classList.remove("active");
+        navMenu.classList.remove("show");
+        logo.classList.remove("logo-animate");
+      }
+    });
   });
 });
