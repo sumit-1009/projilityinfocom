@@ -15,6 +15,11 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -89,7 +94,10 @@
             </p>
             <a href="#contact" class="cta-button mb-2">Request a Demo</a>
           </div>
-          <div class="col-lg-6 hero-right text-center" data-aos="fade-left">
+          <div
+            class="col-lg-6 hero-right text-center mt-4 mt-lg-0"
+            data-aos="fade-left"
+          >
             <img src="./assests/images/hero.gif" alt="Tech Illustration" />
           </div>
         </div>
@@ -100,9 +108,9 @@
     <section class="about py-2" id="about">
       <div class="container">
         <div class="row align-items-center">
-          <!-- IMAGE LEFT -->
+          <!-- IMAGE COLUMN: left on desktop, below on mobile -->
           <div
-            class="col-lg-6 mb-4 mb-lg-0 about-image animated"
+            class="col-lg-6 order-2 order-lg-1 about-image animated mt-4 mt-lg-0"
             data-aos="fade-in"
           >
             <img
@@ -111,8 +119,12 @@
               class="img-fluid rounded"
             />
           </div>
-          <!-- TEXT RIGHT -->
-          <div class="col-lg-6 about-content" data-aos="fade-left">
+
+          <!-- TEXT COLUMN: right on desktop, top on mobile -->
+          <div
+            class="col-lg-6 order-1 order-lg-2 about-content"
+            data-aos="fade-left"
+          >
             <h1>About Us</h1>
             <p><strong>Building Infrastructure That Thinks Ahead</strong></p>
             <p>
@@ -268,82 +280,123 @@
       </div>
     </section>
 
-  <!-- Contact Us Section -->
-<section class="contact py-5" id="contact">
-  <div class="container">
-    <h1 class="text-info text-center mb-3" data-aos="fade-up">Contact Us</h1>
-    <p class="contact-subtitle text-center mb-5 text-white" data-aos="fade-up">
-      Let’s Build the Future Together. We'd love to hear from you!
-    </p>
-
-    <div class="row g-4">
-      <!-- Contact Form -->
-      <div class="col-lg-6" data-aos="fade-right">
-        <form
-          class="contact-form"
-          action="https://formspree.io/f/xqkndjvw"
-          method="POST"
+    <!-- Contact Us Section -->
+    <section class="contact py-5" id="contact">
+      <div class="container">
+        <h1 class="text-info text-center mb-3" data-aos="fade-up">
+          Contact Us
+        </h1>
+        <p
+          class="contact-subtitle text-center mb-5 text-white"
+          data-aos="fade-up"
         >
-          <div class="mb-3">
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              placeholder="Your Name"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <input
-              type="email"
-              name="email"
-              class="form-control"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <textarea
-              name="message"
-              rows="5"
-              class="form-control"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary px-4">Send Message</button>
-        </form>
-      </div>
+          Let’s Build the Future Together. We'd love to hear from you!
+        </p>
 
-      <!-- Contact Info -->
-      <div class="col-lg-6 contact-info" data-aos="fade-left">
-        <h3 class="text-info mb-3">Contact Details</h3>
-        <p><strong>📍 Address:</strong> XYZ Business Park, Mumbai</p>
-        <p>
-          <strong>📞 Phone:</strong>
-          <a href="tel:+919304186673" class="contact-link">+91 93041 86673</a>
-        </p>
-        <p>
-          <strong>📧 Email:</strong>
-          <a href="mailto:sumitsahu.skncoe.entc@gmail.com" class="contact-link">
-            sumitsahu.skncoe.entc@gmail.com
-          </a>
-        </p>
-        <p>
-          <strong>🛋 WhatsApp:</strong>
-          <a href="https://wa.me/919304186673" target="_blank" class="contact-link">
-            Chat on WhatsApp
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="row g-4">
+          <!-- Contact Form -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/xqkndjvw"
+              method="POST"
+            >
+              <div class="mb-3">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  name="message"
+                  rows="5"
+                  class="form-control"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary px-4">
+                Send Message
+              </button>
+            </form>
+          </div>
 
+          <!-- Contact Info -->
+          <div class="col-lg-6 contact-info" data-aos="fade-left">
+            <h3 class="text-info mb-3">Contact Details</h3>
+
+            <p>
+              <strong
+                ><i class="fas fa-map-marker-alt" style="color: #2196f3"></i>
+                Address:</strong
+              >
+              XYZ Business Park, Mumbai
+            </p>
+
+            <p>
+              <strong
+                ><i class="fas fa-phone-alt" style="color: #2196f3"></i>
+                Phone:</strong
+              >
+              <a href="tel:+919304186673" class="contact-link"
+                >+91 93041 86673</a
+              >
+            </p>
+
+            <p>
+              <strong
+                ><i class="fas fa-envelope" style="color: #2196f3"></i>
+                 Email:</strong
+              >
+              <a
+                href="mailto:sumitsahu.skncoe.entc@gmail.com"
+                class="contact-link"
+              >
+                 sumitsahu.skncoe.entc@gmail.com
+              </a>
+            </p>
+
+            <p>
+              <strong
+                ><i class="fab fa-whatsapp" style="color: #2196f3"></i>
+                 WhatsApp:</strong
+              >
+              <a
+                href="https://wa.me/919304186673"
+                target="_blank"
+                class="contact-link"
+              >
+                Chat on WhatsApp
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2025 Projility Infocom | All rights reserved | <strong><a href="https://www.linkedin.com/in/sumit-sahu-6ba911229/">Coded By Sumit S. Sahu</a></strong></p>
+      <p>
+        &copy; 2025 Projility Infocom | All rights reserved |
+        <strong
+          ><a href="https://www.linkedin.com/in/sumit-sahu-6ba911229/"
+            >Coded By Sumit S. Sahu</a
+          ></strong
+        >
+      </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
