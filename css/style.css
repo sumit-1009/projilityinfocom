@@ -340,105 +340,113 @@ a {
    SERVICES SECTION
 =================== */
 .services {
-    padding: 3rem 5%;
-    background: #121212;
-    text-align: center;
+  padding: 3rem 5%;
+  background: #121212;
+  text-align: center;
 }
 
 .services h1 {
-    color: #00c2ff;
-    margin-top: 40px;
-    font-size: 2rem;
+  color: #00c2ff;
+  margin-top: 40px;
+  font-size: 2rem;
 }
 
 .services-subtitle {
-    margin-bottom: 4rem;
-    color: #fff;
-    font-size: 1.5rem;
+  margin-bottom: 4rem;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .service-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
+/* Card Styling */
 .card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    perspective: 1000px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
 
 .card img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: auto;
+  max-height: 270px;
+  object-fit: contain;
+  padding: 1rem 0; /* Solves watermark clipping */
+  transition: transform 0.5s ease;
 }
 
 .card:hover img {
-    transform: scale(1.08);
-}
-
-.card ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(6px);
-    color: #fff;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 0;
-    transition: top 0.4s ease, opacity 0.4s ease;
-    text-align: left;
-    z-index: 2;
-}
-
-.card:hover ul {
-    top: 0;
-    opacity: 1;
-}
-
-.card ul li {
-    opacity: 0;
-    transform: translateY(12px);
-    transition: all 0.3s ease-in-out;
-}
-
-.card:hover ul li {
-    opacity: 1;
-    transform: translateY(0);
+  transform: scale(1.05);
 }
 
 .card h3 {
-    font-size: 1.25rem;
-    text-align: center;
-    padding: 0.8rem 1rem;
-    background-color: #f9f9f9;
-    margin: 0;
-    font-weight: 700;
-    color: #121212;
-    border-top: 1px solid #ddd;
-    z-index: 1;
+  font-size: 1.25rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  margin: 0;
+  font-weight: 700;
+  color: #121212;
+  border-top: 1px solid #ddd;
 }
 
+/* Overlay (unchanged) */
+.card ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: top 0.4s ease, opacity 0.4s ease;
+  text-align: left;
+  z-index: 2;
+}
+
+.card:hover ul {
+  top: 0;
+  opacity: 1;
+}
+
+.card ul li {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover ul li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fix grid responsiveness */
+@media (max-width: 992px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ===================
    INDUSTRIES SECTION
@@ -477,7 +485,7 @@ a {
 .industry-card img {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
