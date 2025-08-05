@@ -24,30 +24,39 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-  document.querySelector(".contact-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // prevent default submission for manual handling
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    const form = this;
-    const toast = document.getElementById("toast");
+    const form = e.target;
+    const data = new FormData(form);
 
     fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" },
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
     })
       .then((response) => {
         if (response.ok) {
-          toast.classList.add("show");
-          setTimeout(() => {
-            toast.classList.remove("show");
-            form.reset();
-          }, 4000);
+          form.reset();
+          showToast("success");
         } else {
-          alert("Oops! There was a problem.");
+          showToast("error");
         }
       })
-      .catch((error) => {
-        alert("Oops! There was a problem submitting your form.");
+      .catch(() => {
+        showToast("error");
       });
-    });
+
+    function showToast(type) {
+      const toast =
+        type === "success"
+          ? document.getElementById("toast-success")
+          : document.getElementById("toast-error");
+
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 4000);
+    }
+  });
 
