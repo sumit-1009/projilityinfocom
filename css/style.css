@@ -621,3 +621,8 @@ a {
 .toast-error {
   background-color: #dc3545; /* red */
 }
+.footer .disclaimer {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
