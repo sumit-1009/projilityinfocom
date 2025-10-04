@@ -590,6 +590,12 @@ a {
     padding: 1rem;
     font-size: 0.9rem;
     transition: background 0.3s ease, color 0.3s ease;
+    
+}
+.footer .disclaimer {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.5rem;
 }
 
 .toast {
